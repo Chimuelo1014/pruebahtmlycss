@@ -1,0 +1,342 @@
+:root{
+  --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --color-primario: rgb(197, 34, 189);
+  --color-secundario: rgb(250, 250, 250);
+  --color-boton: rgb(235, 153, 2);
+  --tamano-titulos: font-size 24px;
+  --tamano-subtitulos1: 
+  --tamano-subtitulos2: 
+  --tamano-subtitulos3: 
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body{
+  font-family: var(--fuente-principal);
+  
+}
+h1{
+  font-size: 26px;
+  text-align: center;
+  padding: 20px;
+}
+
+h3{
+  text-align: center;
+}
+
+h2{
+  text-align: center;
+  font-size: 22px;
+  padding-top: 30px;
+
+}
+h1,h2,h3,h4,h5,h6 {
+  color: var(--color-primario);
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+p{
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+a{
+  color: #2b9dc0;
+}
+a:hover{
+  text-decoration: underline;
+  color: aqua;
+}
+ul{
+  list-style: none;
+}
+
+html{
+scroll-behavior: smooth;
+}
+
+
+.gridcontainer{
+  display: grid;
+  grid-template-rows: 1fr;
+  
+}
+
+/* .gridcontainer *{
+  background-color:aquamarine;
+  border: solid 2px ;
+} */
+
+.header{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--color-primario);
+  padding-top: 30px;
+  padding-bottom: 40px;
+  
+  
+}
+
+.container__logo{
+  color: white;
+  display: flex;
+  justify-content: center
+}
+
+.nav__list{
+  display: block;
+  text-align: center;
+  
+}
+
+.list__link{ 
+  display: flex;
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  padding-bottom: 10px;
+  
+  
+}
+
+.main{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.main__home{
+  display: flex;
+  flex-direction: column;
+}
+.home{
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    0deg,
+    rgb(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.6)
+  ),url(img/Programador_imagen.jpeg);
+
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+  
+
+}
+
+.home__button{
+  text-decoration: none;
+  display: flex;
+  padding: 10px 20px;
+  width:fit-content;
+  height:max-content;
+  background: var(--color-primario) ;
+  font-size: 15px;
+  font-weight: bold;
+  border: 1px solid var(--color-primario);
+  box-shadow: 0px 0px 15px  #f8e8e2 ;
+  border-radius: 5px;
+  color: white;
+}
+
+.home__text{
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.9);
+}
+
+
+
+.about-me__image{
+  display: flex;
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+
+}
+
+.about-me__container{
+  display: flex;
+  gap: 10px;
+  padding: 3px 5px;
+
+}
+
+.skills__tittle{
+  margin-bottom: 35px;
+}
+
+.skills__list{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 50px;
+}
+
+.list__text{
+  color: black;
+  font-weight: bolder;
+}
+
+.list__image,.list__image--center{
+  justify-content: center;
+  width: 70px;
+  box-sizing: border-box;
+  
+}
+
+.list__image--center{
+  padding-top: 6px;
+}
+
+
+
+
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f3f3f3;
+  margin-top: 2rem;
+}
+.redes__links {
+  margin: 0 5px;
+}
+
+
+@media (min-width: 1024px){
+  
+  
+
+  .header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    padding: 10px;
+    
+    
+  }
+  .header__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+ 
+  
+  .container__nav, .container__logo{
+    flex-direction: row;
+    padding-top: 24px;
+    padding-bottom: 0;
+    padding-right: 40px;
+    
+  }
+  .nav__list{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: center
+    ;
+    
+  }
+  .main{
+    margin-top: 70px;
+    
+    
+  }
+  .container__image{
+    margin-left: 1fr;
+  }
+  .about-me__container{
+    justify-content: center;
+  }
+
+  .main__skills{
+    margin-top: 100px;
+  }
+  
+}
+
+
+@media (min-width: 768px){
+
+  h1{
+    font-size: 32px;
+  }
+  h2{
+    font-size: 26px;
+  }
+  h3{
+    font-size: 24px;
+  }
+  p{
+    font-size: 20px;
+  }
+.container__image{
+    background-image: linear-gradient(
+      0deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)
+
+    ), url(img/Me_samuel.webp);
+    background-size: cover;
+    background-position: center center;
+    width: 400px;
+    height: 400px;
+    margin: 50px 10px;
+    border-radius: 20px;
+    
+  }
+
+  .list__link{
+    font-size: 22px;
+  }
+
+  .container__text{
+    width: 50%;
+    text-align: initial;
+    margin: 50px;
+  }
+  
+
+  .skills__list{
+    gap: 80px;
+  }
+  .list__image,.list__image--center{
+    width:100px;
+  }
+  .home__button{
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 480px){
+  .about-me__container{
+    margin-top: 35px;
+  }
+}
+
+
+
+
